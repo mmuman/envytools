@@ -41,8 +41,8 @@ static const struct {
 	{ 'A', 1, envy_bios_parse_bit_A },	/* Analog */
 	{ 'B', 1, envy_bios_parse_bit_empty },	/* BIOSDATA v1 */
 	{ 'B', 2, envy_bios_parse_bit_empty },	/* BIOSDATA v2 */
-	{ 'C', 1, envy_bios_parse_bit_empty },	/* Clock v1 */
-	{ 'C', 2, envy_bios_parse_bit_empty },	/* Clock v2 */
+	{ 'C', 1, envy_bios_parse_bit_C },	/* Clock v1 */
+	{ 'C', 2, envy_bios_parse_bit_C },	/* Clock v2 */
 	{ 'c', 1, envy_bios_parse_bit_empty },	/* 32 Bit */
 	{ 'D', 1, envy_bios_parse_bit_D },	/* DFP/Panel Data */
 	{ 'd', 1, envy_bios_parse_bit_d },	/* DP */

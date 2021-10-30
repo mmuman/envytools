@@ -444,6 +444,7 @@ void envy_bios_print (struct envy_bios *bios, FILE *out, unsigned mask) {
 		envy_bios_print_bit_d(bios, stdout, mask);
 		envy_bios_print_bit_p(bios, stdout, mask);
 		envy_bios_print_bit_S(bios, stdout, mask);
+		envy_bios_print_bit_C(bios, stdout, mask);
 
 		envy_bios_print_dacload(bios, stdout, mask);
 		envy_bios_print_iunk21(bios, stdout, mask);

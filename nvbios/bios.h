@@ -1765,6 +1765,10 @@ struct envy_bios_S {
 	struct envy_bios_bit_entry *bit;
 };
 
+struct envy_bios_C {
+	struct envy_bios_bit_entry *bit;
+};
+
 struct envy_bios_block {
 	unsigned int start;
 	unsigned int len;
@@ -1846,6 +1850,7 @@ struct envy_bios {
 	struct envy_bios_d d;
 	struct envy_bios_p p;
 	struct envy_bios_S S;
+	struct envy_bios_C C;
 
 	struct envy_bios_block *blocks;
 	int blocksnum;
@@ -1922,6 +1927,7 @@ static inline int bios_string(struct envy_bios *bios, unsigned int offs, char *r
 #define ENVY_BIOS_PRINT_d		0x01000000
 #define ENVY_BIOS_PRINT_p		0x02000000
 #define ENVY_BIOS_PRINT_S		0x04000000
+#define ENVY_BIOS_PRINT_C		0x08000000
 #define ENVY_BIOS_PRINT_ALL		0x1fffffff
 #define ENVY_BIOS_PRINT_BLOCKS		0x20000000
 #define ENVY_BIOS_PRINT_UNUSED		0x40000000
@@ -2012,6 +2018,9 @@ void envy_bios_print_d_dp_info(struct envy_bios *, FILE *out, unsigned mask);
 
 int envy_bios_parse_bit_S(struct envy_bios *, struct envy_bios_bit_entry *);
 void envy_bios_print_bit_S(struct envy_bios *, FILE *out, unsigned mask);
+
+int envy_bios_parse_bit_C(struct envy_bios *, struct envy_bios_bit_entry *);
+void envy_bios_print_bit_C(struct envy_bios *, FILE *out, unsigned mask);
 
 int envy_bios_parse_dcb (struct envy_bios *bios);
 void envy_bios_print_dcb (struct envy_bios *bios, FILE *out, unsigned mask);
